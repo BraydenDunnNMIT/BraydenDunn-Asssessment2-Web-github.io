@@ -1,0 +1,35 @@
+
+/* Setting the background color and sizing */
+body {
+  background-image: linear-gradient(to right,#000, #400);
+    width: 99%;
+    height: 99%;
+}
+
+/* Sizing the computer */
+.ascii_comp {
+
+    font-size: 30px;  
+    color: white;
+    position: relative;
+  }
+
+  .warning_text {
+
+    font-size: 15px;
+    color: white;
+    border: solid red 3px;
+    margin: 4px;
+    padding-left: 15px;
+  }
+
+  .click_home1{
+margin: 4px;
+  }
+
+  /* Makes text smaller for mobile, allows for ease of use on smaller devices. */
+  @media (max-width: 750px) {
+    .ascii_comp {
+    font-size: 10px;
+    }
+  }

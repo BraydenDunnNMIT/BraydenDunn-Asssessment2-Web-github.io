@@ -1,0 +1,169 @@
+/* Background modification and sizing. */
+html {
+background-image: url("cstatic.gif");
+background-repeat: repeat;
+overflow-x: hidden;
+background-blend-mode: multiply;
+background-color: #00000060;
+font-family: monospace;
+
+}
+
+/* CSS for the title header text */
+#name {
+  font-size: 40px;
+  font-weight: 3em;
+  text-align: center;
+  margin: 1px;
+  font-family: monospace;
+  text-shadow: 2px 2px blue;
+  color:white;
+  }
+
+  /* Modifies header border size and color */
+#header {
+  position: static;
+  border-radius: 5px;
+  background-color: salmon;
+  border-color: grey;
+  border-top: solid salmon  1px;
+  width: 100%;
+}
+
+/* Flex properties for the list at the top within the header. */
+ul{
+  font-size: 18px;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  list-style:none;
+  margin-right: 40px;
+}
+
+
+  
+  /* Hover affects. */
+  a:hover{
+  color: black;
+    background-color: red;
+   border-radius: 10px;
+  }
+
+  #informative{
+    color: white;
+    font-weight: 300;
+    text-align: center;
+    }
+
+    #informative p{
+font-size: 20px;
+    }
+
+  body{
+      position: relative;
+      padding: 20px;
+  }
+  
+  a{
+      text-decoration:none;
+  }
+  
+  /* Positioning of the links within the header at the top of the page, and the text properties */
+  #redirects ul a { 
+      position: absolute;
+      padding: 1px 1px;
+      width:auto;
+      font-style: oblique;
+      font-weight: bold;
+  }
+
+/* Flex wrapper properties */
+.flexwrapper {
+    display: flex;  
+    flex-flow:column;
+    flex-wrap:wrap;
+    text-align: center; 
+    gap: 20px;
+  }
+  
+  .flexwrapper > * {
+    padding: 30px;
+    flex: 1 100%;
+    border-radius: 25px;
+  }
+
+  /* Modifies how content responds to being re-sized */
+  .flexwrapper {
+    flex-shrink: 1;
+  }
+  
+  .header {
+text-align:left;
+font-size: 20px;
+background: black;
+color: white;
+width: 40%;
+}
+  /* Modifies contact information text */
+  .main {
+    font-size: 20px;
+    position: relative;
+    background: black;
+    color: white;
+   width: 40%;
+   left: 50%;
+   padding-bottom: 5px;
+  }  
+  
+  /* Footer coloring and position */
+  #footer-bottom{
+    position: fixed;
+    right: 0;bottom: 0px;left:0;
+    width: 100%;
+    border-radius: 20px;
+    background-color: salmon;
+    text-align: center;
+    font-weight: bold;
+    }
+
+  /* Media queries for responsive webpaging  */
+
+  @media screen and (max-width: 600px) {
+    ul  {
+        font-size: 15px;
+    }
+  }
+
+  /* Makes the title text smaller for mobile */
+  @media screen and (max-width: 600px) {
+    #name {
+        font-size: 30px;
+        }
+  }
+
+  @media screen and (max-width: 600px) {
+    .header {
+        font-size: 15px;
+        text-align: center;
+        width: 70%;
+        }
+  }
+
+  @media screen and (max-width: 600px) {
+    .main {
+        font-size: 15px;
+      left: 0%;
+      width: 70%;
+        }
+  }
+
+  @media screen and (max-width: 600px) {
+ .flexwrapper{
+align-items: center;
+gap: 70px;
+ } 
+}
+  
+

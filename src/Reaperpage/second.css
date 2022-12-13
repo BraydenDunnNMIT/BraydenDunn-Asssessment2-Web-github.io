@@ -1,0 +1,216 @@
+
+a {
+    text-decoration: none; 
+}
+
+/* Gives the page a black background and prevents vertical and horozontial scrolling. */
+html {
+    background-color: black;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+/* Attributes for the grim reaper. */
+.grim {
+    font-size: 30px;
+    color: aquamarine;
+ position: absolute;
+ text-shadow: 2px 2px 1px slateblue;
+}
+
+/* Text attributes for the card text. */
+.cardtext {
+    font-size: 20px;
+    color: aquamarine;
+    text-shadow: 2px 2px 1px red;
+    position: relative;
+}
+
+/* Card position and text attributes. */
+.cards {
+    display: flex;
+position: absolute;
+    font-size: 250px;
+    color: white;
+    left: 40%;
+    top: 15%;
+    text-shadow: 2px 2px red;
+}
+
+/* Position on screen */
+.redirect_button {
+    position: relative;
+    left: 90%;
+}
+
+/* Modifies the font size for the return button on desktop page. */
+button {
+    font-size: 30px;
+}
+
+/* Animation for text moving when you hover over the cards starts here. */
+
+/* Note to reader:  The code is read from the right side to the left for the animation
+meaning that card3 is the right-most card and card1 is the left-most card.
+
+/* The specifications of the animation and its length/ The text position and sizing. */
+
+#card3:before,
+#card3:after {
+    content: '';
+    position: absolute;
+    top: 90%;
+    left: 70%;
+    font-size: 100px;
+    opacity: 0;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+
+/* What the animation does when you hover over. Where the animation starts. */
+#card3:before {
+    content: attr(data-hover);
+    -webkit-transform: translate(-150%,0);
+    -moz-transform: translate(-150%,0);
+    -ms-transform: translate(-150%,0);
+    -o-transform: translate(-150%,0);
+    transform: translate(-150%,0);
+}
+
+/* Animation after code */
+#card3:hover:before,
+#card3:active:after {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+
+}
+
+/* Displays the card3 id text as an inline block */
+#card3 {
+    display:inline-block;
+}
+
+/* The code for #card2 and #card1 is nearly the exact same except some minor positoning differences.*/
+
+#card2:before,
+#card2:after {
+    content: '';
+    position: absolute;
+    top: 90%;
+    left: 30%;
+    font-size: 100px;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+
+/* :before */
+
+#card2:before {
+    content: attr(data-hover);
+    -webkit-transform: translate(-150%,0);
+    -moz-transform: translate(-150%,0);
+    -ms-transform: translate(-150%,0);
+    -o-transform: translate(-150%,0);
+    transform: translate(-150%,0);
+}
+
+
+#card2:hover:before,
+#card2:active:after {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+  
+}
+
+
+#card2 {
+    display:inline-block;
+}
+
+
+#card1:before,
+#card1:after {
+    content: '';
+    position: absolute;
+    top: 90%;
+    left: -5%;
+    font-size: 100px;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+
+#card1:before {
+    content: attr(data-hover);
+    -webkit-transform: translate(-150%,0);
+    -moz-transform: translate(-150%,0);
+    -ms-transform: translate(-150%,0);
+    -o-transform: translate(-150%,0);
+    transform: translate(-150%,0);
+}
+
+#card1:hover:before,
+#card1:active:after {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+}
+
+#card1 {
+    display:inline-block;
+}
+/* End of the animation CSS for the cards. */
+
+
+/* Below code is for size modification for mobile responsive webpage. Changes the size for better mobile useability. */
+@media screen and (max-width: 600px) {
+    .grim{
+        font-size: 10px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .cards {
+        font-size: 100px;
+        left: 10%;
+       top: 40%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .cardtext {
+        font-size: 10px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .redirect_button {
+        left: 70%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {       
+  button {
+    font-size: 15px;
+}
+}

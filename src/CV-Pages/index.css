@@ -1,0 +1,136 @@
+/* States base properties for the webpage. */
+html {
+    color: black;
+        background-color: black;
+        background-size: static;
+        font-family: monospace;
+        overflow-x: hidden;
+    }
+
+    /* Modifies the website title text and determines its height and properties */
+    #name {
+        font-size: 50px;
+        font-weight: 3em;
+        text-align: center;
+        margin: 1px;
+        font-family: monospace;
+        text-shadow: 2px 2px black;
+        color:white;
+        }
+        
+        /* Styling of the header background */
+        #header {
+            position: static;
+            border-radius: 5px;
+            background-color: salmon;
+            border-color: grey;
+            border-top: solid salmon  1px;
+            width: 100%;
+        }
+        
+        /*  flex proerpties for the nav bar */
+        #redirects ul {
+           margin: 2px;
+           padding-top: 15px;
+           font-size: 20px;
+           padding-bottom: 25px;
+        }
+        
+    
+        /* Sizing and flex properties for the list buttons at the top of the page. */
+    ul{
+        font-size: 18px;
+        font-weight: bolder;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        list-style:none;
+        margin-right: 40px;
+    }
+    
+        body{
+            position: relative;
+        }
+        
+        a{
+            text-decoration:none;
+        }
+        
+        /* Positioning of the links within the header at the top of the page, and the text properties */
+        #redirects ul a { 
+            position: absolute;
+            padding: 1px 1px;
+            width:auto;
+            font-weight: bold;
+        }
+        
+        /* Positioning of the top navigation bar */
+        #footer-bottom{
+        position: absolute;
+        right: 0;bottom: -90px;left:0;
+        width: 100%;
+        border-radius: 20px;
+        background-color: salmon;
+        text-align: center;
+        font-weight: bold;
+        }
+     
+        /* Hover affects */
+        a:hover{
+        color: black;
+          background-color: red;
+         border-radius: 10px;
+        }
+        
+        /* Aligns the pages text into the center */
+        .container {
+            text-align: center;
+        }
+        
+        
+        /* The white box that holds the websites data and its flex properties. */
+        .box {
+            font-size: 20px;
+                display: inline-flex;
+                flex-wrap: wrap;
+                position: relative;
+                justify-content: center;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                background-color: white;
+                border: 10px solid black;
+                width: 80%;
+            }
+    
+        /* Media query for smaller devies. Changes the links at the top of the page.*/
+            @media only screen and (max-width: 600px) {
+                #links ul {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    margin-right: 30px;
+                    justify-content: space-evenly;
+                }
+              }
+        
+              /* Makes the header text smaller for mobile which makes readability easier */
+              @media screen and (max-width: 600px) {
+                #name {
+                    font-size: 30px;
+                    }
+              }
+        
+              /* Makes text smaller for ease of use on mobile */
+              @media screen and (max-width: 600px) {
+                .box {
+                    font-size: 15px;
+                    }
+              }
+    
+              /* Changes the size of the redirect links for mobile. Makes them easier to read. */
+              @media screen and (max-width: 600px) {
+                ul  {
+                    font-size: 15px;
+                }
+              }
